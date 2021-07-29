@@ -104,7 +104,7 @@ class Git {
 			newBranch += `-${ Math.round((new Date()).getTime() / 1000) }`
 		}
 
-		core.debug(`Creating PR Branch ${ newBranch }`)
+		core.info(`Creating PR Branch ${ newBranch }`)
 
 		await execCmd(
 			`git checkout -b "${ newBranch }"`,
